@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ChatGPT</title>
+</head>
+<body>
+    <aside>
+        <img src="./img/Logo.png" alt="Compass" class="logo">
+        <nav>
+            <div>
+                <a href="#chat" class="nav-link" data-target="chat">
+                    <img src="./img/Vector.png" alt="chat" class="icon-chat">
+                </a>
+                <a href="#filter" class="nav-link" data-target="filter">
+                    <img src="./img/Filter.png" alt="filter" class="icon">
+                </a>
+                <a href="#compass" class="nav-link" data-target="compass">
+                    <img src="./img/Compass.png" alt="compass" class="icon">
+                </a>
+                <a href="#layer" class="nav-link" data-target="layer">
+                    <img src="./img/Layer 2.png" alt="layer" class="icon">
+                </a>
+            </div>
+           <div>
+                <a href="#profile" class="nav-link" data-target="profile">
+                    <img src="./img/User Profile.png" alt="profile">
+                </a>
+                <a href="#signout" class="nav-link" data-target="sign-out">
+                    <img src="./img/signout.png" alt="sign out" class="icon">
+                </a>
+                <hr>
+                <a href="#signout" class="nav-link" data-target="analytics">
+                    <img src="./img/Dark version.png" alt="sign out">
+                </a>
+           </div>
+        </nav>
+    </aside>
+
+
+    <div class="nav-item">
+        <div id="chat" class="page">
+            <div class="head">
+                <p class="title">My Chats</p>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-chat">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg> 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-chat">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                </div>             
+            </div>
+            <p>Chat Page</p>
+        </div>
+        <div id="filter" class="page">
+            <p>filter Page</p>
+        </div>
+        <div id="compass" class="page">
+            <p>compass Page</p>
+        </div>
+        <div id="layer" class="page">
+            <p>layer Page</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navLinks = document.querySelectorAll('.nav-link');
+            var pages = document.querySelectorAll('.page');
+            
+            // Function to activate a specific page
+            function activatePage(target) {
+                pages.forEach(function (page) {
+                    page.style.display = 'none';
+                });
+                if (target) {
+                    var targetPage = document.getElementById(target);
+                    if (targetPage) {
+                        targetPage.style.display = 'block';
+                    }
+                }
+            }
+
+            // Activate the "Chat" page by default
+            activatePage('chat');
+
+            // Add click event listeners to navigation links
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var target = this.getAttribute('data-target');
+                    activatePage(target);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

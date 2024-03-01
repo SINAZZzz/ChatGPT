@@ -1,16 +1,16 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     display: flex;
 }
 
-
 aside {
     background-color: #ffffff;
-    width:4%;
-    height: 100% ;
+    width: 4%;
+    height: 100%;
     border-right: 1px #EAEAEA solid;
     padding: 1.75rem 0.75rem;
     display: flex;
@@ -18,7 +18,7 @@ aside {
     align-items: center;
 }
 
-nav{
+nav {
     width: 100%;
     height: 100%;
     display: flex;
@@ -29,21 +29,21 @@ nav{
     text-align: center;
 }
 
-hr{
+hr {
     color: #EAEAEA;
 }
 
-.logo{
+.logo {
     margin-bottom: 30%;
 }
 
-.icon{
+.icon {
     background: #F9F9F9;
     padding: 0.5rem;
     border-radius: 10px;
 }
 
-.icon-chat{
+.icon-chat {
     background: #10A37F;
     padding: 0.6rem;
     border-radius: 10px;
@@ -54,89 +54,79 @@ hr{
     padding: 0.5rem 0;
 }
 
-.nav-item{
+.nav-item {
     width: 30%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
 }
- 
-.page{
+
+.page {
     display: flex;
     padding: 0px 20px;
 }
 
-.head{
+.head-page {
     display: flex;
     justify-content: space-between;
     padding: 20px 0px;
 }
 
-.title{
+.title-page {
     font-weight: bold;
     font-size: 25px;
 }
 
-.btn-chat-add{
+.btn-chat-add,
+.btn-chat-menu {
     width: 1.5rem;
-    background: #23C69E ;
+    background: #23C69E;
     color: #ffffff;
     padding: 5px;
     border-radius: 10px;
     margin-right: 10px;
 }
 
-.btn-chat-meun{
-    width: 1.5rem;
-    background: #EFEFEF ;
-    color: #3B3B3B;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.tab{
+.tab {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background: #EEEEEE;
     width: 100%;
-    height: 60%;
+    height: 20%;
     border-radius: 10px;
 }
 
-.tab-chats{
+.tab-chats,
+.tab-saved {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+}
+
+.tab-chats {
     width: 46%;
     background: #FFFFFF;
     height: 83%;
     border-radius: 10px;
     color: #14B48D;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    font-weight: bold;
 }
 
-.tab-saved{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.tab-saved {
     width: 50%;
-    font-weight: bold;
 }
 
-.tab-chats svg{
-    width: 20px;
-    margin-right: 10px;
-}
-
+.tab-chats svg,
 .tab-saved svg {
     width: 20px;
     margin-right: 10px;
 }
 
-.tab-chats span {
+.tab-chats span,
+.tab-saved span {
     background: #8A8A8A1C;
     margin-left: 10px;
     padding: 4px;
@@ -144,9 +134,123 @@ hr{
     color: #14B48D;
 }
 
-.tab-saved span { 
-    background: #8A8A8A1C;
-    margin-left: 10px;
-    padding: 4px;
-    border-radius: 5px;
+.box-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 0px;
+}
+
+.box-search img {
+    width: 25px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px; 
+    background-color: #EFEFEF;
+}
+
+.search {
+    position: relative;
+    width: 90%;
+}
+
+.search input[type="text"] {
+    width: calc(100% - 25px); 
+    height: 40px;
+    padding-left: 30px;
+    background: #EFEFEF;
+    border: none; 
+    border-radius: 10px;
+}
+
+.search svg {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    fill: none;
+    stroke: #575B65;
+    width: 20px;
+    height: 20px;
+}
+
+.search ::placeholder{
+    color: #575B65;
+    font-weight: bold;
+}
+
+.box-chats{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box-chats-two{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #E3FEF7;
+}
+
+.title-chat{
+    display: flex;
+    align-items: center;
+}
+
+.title-chat img {
+    padding-right: 10px;
+}
+
+.chat-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time{
+    color: #5F5F5F99;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.description-chat{
+    color:#6D717C ;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 10px 10px 25px;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .nav-item {
+        width: 100%;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 20px; 
+    }
+
+
+    .btn-chat-add,
+    .btn-chat-menu {
+        width: 1rem; 
+        padding: 5px;
+    }
+
+    .tab-chats,
+    .tab-saved {
+        font-size: 14px;
+    }
 }

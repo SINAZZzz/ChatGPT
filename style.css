@@ -50,17 +50,10 @@ hr {
     border-radius: 10px;
 }
 
+
 .nav-link {
     display: block;
     padding: 0.5rem 0;
-}
-
-.nav-item {
-    width: 30%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 .page {
@@ -155,6 +148,13 @@ hr {
     padding: 20px 0px;
 }
 
+.box-search-chat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 7rem;
+}
+
 .box-search img {
     width: 25px;
     height: 20px;
@@ -164,9 +164,22 @@ hr {
     background-color: #EFEFEF;
 }
 
+.mic  {
+    width: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 10px; 
+    background-color: #FFFFFF;
+}
+
 .search {
     position: relative;
     width: 90%;
+}
+
+.search-chat{
+    position: relative;
+    width: 86%;
 }
 
 .search input[type="text"] {
@@ -174,6 +187,15 @@ hr {
     height: 40px;
     padding-left: 30px;
     background: #EFEFEF;
+    border: none; 
+    border-radius: 10px;
+}
+
+.search-chat input[type="text"] {
+    width: calc(100% - 25px); 
+    height: 60px;
+    padding-left: 60px;
+    background: #FFFFFF;
     border: none; 
     border-radius: 10px;
 }
@@ -187,6 +209,30 @@ hr {
     stroke: #575B65;
     width: 20px;
     height: 20px;
+}
+
+.magic{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    fill: none;
+    stroke: #575B65;
+    width: 35px;
+}
+
+.send{
+    position: absolute;
+    top: 60%;
+    right: -20px;
+    transform: translateY(-80%);
+    fill: none;
+    stroke: #575B65;
+    width: 20px;
+}
+
+.search-chat ::placeholder{
+    color: #A0A7BB;
 }
 
 .search ::placeholder{
@@ -265,10 +311,16 @@ hr {
     background: #EFEFEF;
     border-radius: 10px;
     margin-top: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .user-massage{
-    margin: 20px 7rem;
+    margin: 10px 7rem;
+}
+
+.user-massage-two{
+    margin: 0px 7rem;
 }
 
 .profile-time{
@@ -289,11 +341,17 @@ hr {
 .massage-box-user {
     background-color: #FFFFFF;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 15px;
     width: fit-content;
+    height: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.massage-box-user img{
+    margin-left: 10px;
+    width: 13px;
 }
 
 .massage-box-bot{
@@ -301,6 +359,7 @@ hr {
     padding: 20px;
     border-radius: 10px;
     width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,7 +372,7 @@ hr {
 }
 
 .bot-massage{
-    margin: 20px 7rem;
+    margin: 10px 7rem;
 }
 
 .arrow{
@@ -339,6 +398,7 @@ hr {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -389,6 +449,24 @@ hr {
     height: 20px;
 }
 
+.date-massege{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin: 0px 7rem;
+}
+
+.date-massege p {
+    color:#8E8E8E99 ;
+    padding: 0px 15px;
+    font-size: small;
+}
+
+.date-massege hr { 
+    width: 100%;
+    color: #B7B7B7;
+}
 
 @media only screen and (max-width: 768px) {
     .nav-item {

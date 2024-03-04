@@ -299,9 +299,10 @@ hr {
 .massage-box-bot{
     background-color: #D8EFE9;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 10px;
     width: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -334,6 +335,59 @@ hr {
     justify-content: space-between;
 }
 
+.tools{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.reaction{
+    display: flex;
+    height: 20px;
+    background-color: #B0D7CD;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.smiley{
+    margin-right: 10px;
+}
+
+.options{
+    display: flex;
+}
+
+.generate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B0D7CD;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.generate svg { 
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B0D7CD;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.save svg{
+    width: 20px;
+    height: 20px;
+}
 
 
 @media only screen and (max-width: 768px) {

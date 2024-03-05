@@ -50,9 +50,26 @@ hr {
     border-radius: 10px;
 }
 
+.marker {
+    width: 15%; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box-mark{
+    width: 82px; 
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: #1E1F22;
+}
+
+
 
 .nav-link {
     display: block;
+    position: relative;
     padding: 0.5rem 0;
 }
 
@@ -478,58 +495,59 @@ hr {
     color: #B7B7B7;
 }
 
-.toggle-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    padding: 0.5rem 0 ;
-}
+/* toggle dark and light */
 
-.toggle-switch {
-    position: relative;
-    width: 30px;
-    height: 60px;
-    padding: 2px;
+.toggle {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;    
 }
 
 .toggle-slider {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20px;
+    height: 60px;
+    background-color: #E2E2E2;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.toggle-slider img { 
+    width: 14px;
+    padding: 10px 0;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
 }
 
-.toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+.toggle-slider img:last-child { 
+    background-color: #E2E2E2;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-input:checked + .toggle-slider {
-    background-color: #2196F3;
+.toggle-slider img:first-child { 
+    background-color: #E2E2E2;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-input:checked + .toggle-slider:before {
-    transform: translateY(-30px);
+.toggle-slider img:first-child.active { 
+    background-color: #FFFFFF;
 }
 
-/* Dark mode */
+.toggle-slider img:last-child.active { 
+    background-color: #FFFFFF;
+}
+
 body.dark-mode {
-    background-color: #333; /* Set a dark background color */
-    color: #fff; /* Set text color to white */
+    background-color: #333;
+    color: #fff;
 }
+
+/* responsive */
+
 
 @media only screen and (max-width: 768px) {
     .nav-item {
@@ -554,5 +572,24 @@ body.dark-mode {
     .tab-chats,
     .tab-saved {
         font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .marker {
+        width: 15%;
+    }
+    .box-mark{
+        width: 70px; 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .marker {
+        width: 15%; 
+    }
+    .box-mark{
+        width: 60px; 
     }
 }

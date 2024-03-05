@@ -11,8 +11,11 @@
         <nav>
             <img src="./img/Logo.png" alt="Compass" class="logo">
 
-            <div class="nav-link">
+            <div>
                 <a href="#chat" class="nav-link" data-target="chat" >
+                    <div class="box-mark">
+                        <img src="img/Marker (1).png" alt="marker" class="marker">
+                    </div>
                     <img src="./img/Vector.png" alt="chat" class="icon-chat">
                 </a>
                 <a href="#filter" class="nav-link" data-target="filter">
@@ -33,14 +36,13 @@
                     <img src="./img/signout.png" alt="sign out" class="icon">
                 </a>
                 <hr>
-                <!-- <a href="#signout" class="nav-link" data-target="analytics">
-                    <img src="./img/Dark version.png" alt="sign out">
-                </a> -->
-                <div class="toggle-container">
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="toggle" onclick="toggleDarkMode()">
-                        <span class="toggle-slider"></span>
-                    </label>
+                <div class="toggle">
+                    <div>
+                        <div class="toggle-slider">
+                            <img src="img/dark.png" alt="Dark Mode" onclick="changeMode('dark')" id="darkModeBtn">
+                            <img src="img/light.png" alt="Light Mode" onclick="changeMode('light')" id="lightModeBtn">
+                        </div>
+                    </div>
                 </div>
            </div>
         </nav>
@@ -340,11 +342,21 @@
     </div>
 
     <script>
-          function toggleDarkMode() {
-            const body = document.querySelector('body');
-            body.classList.toggle('dark-mode');
-        }
-
+          function changeMode(mode) {
+    const body = document.querySelector('body');
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const lightModeBtn = document.getElementById('lightModeBtn');
+    
+    if (mode === 'light') {
+        body.classList.remove('dark-mode');
+        darkModeBtn.classList.remove('active');
+        lightModeBtn.classList.add('active');
+    } else if (mode === 'dark') {
+        body.classList.add('dark-mode');
+        lightModeBtn.classList.remove('active');
+        darkModeBtn.classList.add('active');
+    }
+}
         document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-link');
             var pages = document.querySelectorAll('.page');

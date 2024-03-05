@@ -64,6 +64,8 @@ hr {
     flex-direction: column;
 }
 
+
+
 .page {
     display: flex;
     padding: 0px 20px;
@@ -474,6 +476,59 @@ hr {
 .date-massege hr { 
     width: 100%;
     color: #B7B7B7;
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0 ;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 30px;
+    height: 60px;
+    padding: 2px;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateY(-30px);
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #333; /* Set a dark background color */
+    color: #fff; /* Set text color to white */
 }
 
 @media only screen and (max-width: 768px) {

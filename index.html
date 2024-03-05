@@ -33,9 +33,15 @@
                     <img src="./img/signout.png" alt="sign out" class="icon">
                 </a>
                 <hr>
-                <a href="#signout" class="nav-link" data-target="analytics">
+                <!-- <a href="#signout" class="nav-link" data-target="analytics">
                     <img src="./img/Dark version.png" alt="sign out">
-                </a>
+                </a> -->
+                <div class="toggle-container">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggle" onclick="toggleDarkMode()">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
            </div>
         </nav>
     </aside>
@@ -334,6 +340,11 @@
     </div>
 
     <script>
+          function toggleDarkMode() {
+            const body = document.querySelector('body');
+            body.classList.toggle('dark-mode');
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             var navLinks = document.querySelectorAll('.nav-link');
             var pages = document.querySelectorAll('.page');

@@ -30,8 +30,10 @@ nav {
     text-align: center;
 }
 
-hr {
-    color: #EAEAEA;
+.hr{
+    width: 100%;
+    height: 2px;
+    background-color:#EAEAEA ;
 }
 
 .logo {
@@ -367,7 +369,7 @@ hr {
 
 .massage-box-user {
     background-color: #FFFFFF;
-    padding: 20px;
+    padding: 27px;
     border-radius: 15px;
     width: fit-content;
     height: 5px;
@@ -541,9 +543,50 @@ hr {
     background-color: #FFFFFF;
 }
 
+/* dark mode */
+
 body.dark-mode {
-    background-color: #333;
+    background-color: #282A2E;
     color: #fff;
+}
+
+.dark-mode .hr{
+    background-color: #2D2E30;
+}
+
+.dark-mode aside{
+    background-color: #1E1F22;
+    border-right: 1px #1E1F22 solid;
+
+}
+
+.dark-mode .icon{
+    background-color: #2b2a2a;
+}
+
+.dark-mode .toggle-slider{
+    background-color:#3F424A ;
+}
+
+.dark-mode .toggle-slider img:last-child { 
+    background-color: #3F424A;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.dark-mode .toggle-slider img:first-child { 
+    color: white;
+    background-color: #64666D;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.dark-mode .toggle-slider img:first-child.active { 
+    background-color: #64666D;
+}
+
+.dark-mode .btn-chat-menu{
+    background-color: #1E1F22;
 }
 
 /* responsive */

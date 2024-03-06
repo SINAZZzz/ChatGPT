@@ -161,13 +161,19 @@ nav {
     margin-right: 10px;
 }
 
-.tab-chats span,
-.tab-saved span {
+.tab-chats span{
     background: #8A8A8A1C;
     margin-left: 10px;
     padding: 1px 2px;
     border-radius: 5px;
     color: #14B48D;
+}
+
+.tab-saved span{
+    background: #8A8A8A1C;
+    margin-left: 10px;
+    padding: 1px 2px;
+    border-radius: 5px;
 }
 
 .box-search {
@@ -224,7 +230,7 @@ nav {
     width: calc(100% - 25px); 
     height: 60px;
     padding-left: 60px;
-    background: #FFFFFF;
+    background: #fff;
     border: none; 
     border-radius: 10px;
 }
@@ -245,8 +251,6 @@ nav {
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    fill: none;
-    stroke: #575B65;
     width: 35px;
 }
 
@@ -417,6 +421,12 @@ nav {
     padding: 0px 5px;
 }
 
+.arrow svg { 
+    width: 10px;
+    background-color:#E6E6E6 ;
+    padding: 2px;
+}
+
 .box-proflie{
     display: flex;
     width: 100%;
@@ -492,9 +502,10 @@ nav {
     font-size: small;
 }
 
-.date-massege hr { 
+.hr-date-massege{
     width: 100%;
-    color: #B7B7B7;
+    height: 1px;
+    background-color:#B7B7B7 ;
 }
 
 /* toggle dark and light */
@@ -517,30 +528,22 @@ nav {
     border-radius: 15px;
 }
 
-.toggle-slider img { 
+.toggle-slider svg { 
     width: 14px;
     padding: 10px 0;
     cursor: pointer;
 }
 
-.toggle-slider img:last-child { 
+.toggle-slider svg:first-child { 
     background-color: #E2E2E2;
     padding: 5px;
     border-radius: 10px;
 }
 
-.toggle-slider img:first-child { 
-    background-color: #E2E2E2;
+.toggle-slider svg:last-child.active { 
+    background-color: #FFFFFF;
     padding: 5px;
     border-radius: 10px;
-}
-
-.toggle-slider img:first-child.active { 
-    background-color: #FFFFFF;
-}
-
-.toggle-slider img:last-child.active { 
-    background-color: #FFFFFF;
 }
 
 /* dark mode */
@@ -568,20 +571,8 @@ body.dark-mode {
     background-color:#3F424A ;
 }
 
-.dark-mode .toggle-slider img:last-child { 
-    background-color: #3F424A;
-    padding: 5px;
-    border-radius: 10px;
-}
 
-.dark-mode .toggle-slider img:first-child { 
-    color: white;
-    background-color: #64666D;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-.dark-mode .toggle-slider img:first-child.active { 
+.dark-mode .toggle-slider svg:first-child.active { 
     background-color: #64666D;
 }
 
@@ -589,8 +580,92 @@ body.dark-mode {
     background-color: #1E1F22;
 }
 
-/* responsive */
+.dark-mode .tab { 
+    background-color: #3F424A;
+}
 
+.dark-mode .tab-chats{
+    background-color: #1E1F22;
+}
+
+.dark-mode .search input[type="text"]{
+    background-color:#3F424A ;
+}
+
+.dark-mode .box-search img{
+    background-color:#1E1F22 ;
+}
+
+.dark-mode .time {
+    color: #ABABAB99;
+}
+
+.dark-mode .box-chats-two { 
+    background-color: #1E1F22;
+}
+
+.dark-mode .div-chat{
+    background-color:#3F424A ;
+}
+
+.btn-page-chat{
+    background-color: #1E1F22;
+    color: white;
+}
+
+.dark-mode .massage-box-user{
+    background-color: #4B4F5B ;
+}
+
+.dark-mode .arrow p { 
+    color: #ABABAB99;
+}
+
+.dark-mode .arrow svg {
+    background-color: #282A2E;
+}
+
+.dark-mode .massage-box-bot{
+    background-color: #28303F;
+}
+
+.dark-mode .reaction{
+    background-color: #202633;
+}
+
+.dark-mode .generate{
+    background-color: #202633;
+}
+
+.dark-mode .save { 
+    background-color: #202633;
+}
+
+.dark-mode .generate svg{
+    color: #868FA7;
+}
+
+.dark-mode .save svg {
+    color: #868FA7;
+}
+
+.dark-mode .search-chat input[type="text"]{
+    background-color: #4B4F5B;
+}
+
+.dark-mode .mic{
+    background-color: #4B4F5B;
+}
+
+.dark-mode .date-massege p {
+    color: #ABABAB99;
+}
+
+.dark-mode .hr-date-massege { 
+    background-color: #4B4F5B;
+}
+
+/* responsive */
 
 @media only screen and (max-width: 768px) {
     .nav-item {

@@ -124,6 +124,7 @@ nav {
     margin-right:  10px;
 }
 
+
 .tab {
     display: flex;
     justify-content: space-evenly;
@@ -608,7 +609,7 @@ body.dark-mode {
     background-color:#3F424A ;
 }
 
-.btn-page-chat{
+.dark-mode .btn-page-chat{
     background-color: #1E1F22;
     color: white;
 }
@@ -711,3 +712,118 @@ body.dark-mode {
         width: 60px; 
     }
 }
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+    /* Hide the aside */
+    aside {
+        display: none;
+    }
+
+    /* Hide the nav-item */
+    .nav-item {
+        display: none;
+    }
+
+    /* Show only the page-chat */
+    .page-chat {
+        display: block !important; /* Use !important to override other styles */
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .div-chat{
+        overflow-x: hidden;
+    }
+
+    .user-massage,
+    .bot-massage,
+    .user-massage-two {
+        margin: 10px 15px;
+        font-size: 10px;
+    }
+
+    .profile-time{
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-time img{
+        margin-bottom: -10px;
+        margin-right: 10px;
+        margin-left: -10px;
+    }
+
+    .massage-box-user{
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
+    }
+
+    .title-page-chat{
+        font-size: 16px;
+    }
+
+    .btn-page-chat{
+        width: 15px;
+        border-radius: 7px;
+    }
+    .massage-box-bot{
+        width: 90%;
+    }
+    .options{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .generate{
+        padding: 3px 3px;
+        font-size: 8px;
+        margin-right: 0.5rem;
+    }
+    .generate svg { 
+        width: 20px;
+        margin-right: 2px;
+    }
+    .save{
+        padding: 0px 2px;
+        border-radius: 6px;
+    }
+    .save svg{
+        width: 13px;
+    }
+    .reaction{
+        height: 15px;
+        margin-right: 3rem;
+    }
+    .date-massege{
+        margin: 0px 1rem;
+    }
+    .date-massege p {
+        font-size: 10px;
+    }
+    .arrow p{
+        font-size: 10px;
+    }
+    .arrow svg{
+        width: 9px;
+        border-radius: 5px;
+        padding: 1px;
+    }
+    .box-search-chat{
+        padding: 20px 1rem;
+    }
+    .box-search img {
+        width: 15px;
+        height: 10px;
+    }
+    .search-chat{
+        width: 100%;
+        margin-right: 2rem;
+    }
+    .search-chat input[type="text"]::placeholder{
+        font-size: 10px;
+    }
+}
+
